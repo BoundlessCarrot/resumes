@@ -1,0 +1,276 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\colorlet{awesome}{awesome-skyblue}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+\definecolor{darktext}{HTML}{414141}
+\definecolor{text}{HTML}{333333}
+\definecolor{graytext}{HTML}{5D5D5D}
+\definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+\name{Jordan}{Streete}
+\position{Software Engineer}
+\address{Berlin, Germany}
+\mobile{+49 162 8978 248}
+\email{jordan.streete@gmail.com}
+\homepage{Personal website}
+\github{Github}
+\linkedin{Linkedin}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world."}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Jordan Streete~~~·~~~Résumé}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Profile}
+
+%-------------------------------------------------------------------------------
+%	SECTION CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvparagraph}
+Software Engineer passionate about learning. Worked in a professional environment [within various roles] since 2019, but I've been coding and learning since I was 10. I am a team player - collaboration is second-nature to me. I can also really thrive under a solid team-lead who is willing to provide a direction for me to go. I've worked on IoT, B2B ERP, and now Payments, but I'm really looking to change it up again and expand my horizons.
+\end{cvparagraph}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Employment History}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Application/backend Programmer (Werkstudent)} % Job title
+    {Marley Spoon} % Organization
+    {Berlin} % Location
+    {Oct 2022 - Present} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {TS: Ruby, Rails, Sidekiq, GraphQL, Postgres, Coffeescript/Javascript, Kubernetes}
+        \item {Worked with my team on the payments API of the new-customer experience in the web funnel}
+        \item {Became the team-wide and (possibly company-wide) go-to-guy for the invoicing system}
+        \item {Added direct metrics for new indebted customers, along with backfilling relevant data for old customers using database migrations}
+        \item {Added features for customers and customer service staff, including some front-end work}
+        \item {Was afforded the opportunity to work with technologies I wouldn't really have reason to otherwise, such as most of the TS as well as DataDog and GitHub CI/CD}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Embedded/IoT Software Engineer (Werkstudent and full-time)} % Job title
+    {Envio Systems} % Organization
+    {Berlin} % Location
+    {Sep 2021 - Jun 2022} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {TS: Python, C}
+        \item {Worked on a small team developing and adding new features to one of Envio's main products (backend API), creating massive value}
+        \item {Quickly developed an expertise in Envio's IoT tech stack}
+        \item {Created a seamless product experience by closely collaborating with the hardware team in properly integrating and testing our product with theirs}
+        \item {Rapidly acquired knowledge on sensor protocols in order to properly add them into the product}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Software Engineer Intern} % Job title
+    {Sirum GmbH} % Organization
+    {Hamburg, Germany} % Location
+    {Jun 2019 - Aug 2019} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Photographers Assistant} % Job title
+    {KISS ME IN PARIS} % Organization
+    {Paris, Ile-de-France, France} % Location
+    {Jun 2017 - Aug 2018} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {B.S. Computer Science} % Degree
+    {Jacobs University} % Institution
+    {Bremen} % Location
+    {Aug 2018 - Present} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {High School} % Degree
+    {MAST@FIU} % Institution
+    {Miami} % Location
+    {Aug 2014 - Jun 2018} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Skills}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvskills}
+
+%---------------------------------------------------------
+  \cvskill
+    {Zig} % Category
+    {Skillful} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Ruby/Rails} % Category
+    {Skillful} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Git} % Category
+    {Skillful} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Python} % Category
+    {Skillful} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {C/C++} % Category
+    {Beginner} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Bash} % Category
+    {Beginner} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {Rust} % Category
+    {Novice} % Skills
+
+%---------------------------------------------------------
+\end{cvskills}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Languages}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvskills}
+
+%---------------------------------------------------------
+  \cvskill
+    {English} % Category
+    {Native speaker} % Skills
+
+%---------------------------------------------------------
+  \cvskill
+    {German} % Category
+    {B1} % Skills
+
+%---------------------------------------------------------
+\end{cvskills}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Hobbies}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvparagraph}
+Biking, Cooking, Reading, Competitive video games (Counter-Strike, Destiny 2)
+\end{cvparagraph}
+
+%-------------------------------------------------------------------------------
+\end{document}
