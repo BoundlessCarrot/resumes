@@ -1,0 +1,61 @@
+name: Build LaTeX Resumes
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.tex'
+      - '.github/workflows/build-latex.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.tex'
+      - '.github/workflows/build-latex.yml'
+  workflow_dispatch:
+
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      # For awesome-cv (requires XeLaTeX)
+      - name: Build Awesome-CV Resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: awesome-cv-resume.tex
+          latexmk_use_xelatex: true
+          # Specify any additional packages needed for awesome-cv
+          extra_system_packages: |
+            fonts-font-awesome
+      
+      # For moderncv (can use pdflatex)
+      - name: Build ModernCV Resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: moderncv-resume.tex
+      
+      # Upload the built PDFs as artifacts
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: resumes
+          path: |
+            awesome-cv-resume.pdf
+            moderncv-resume.pdf
+
+      # Optional: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' # Only deploy on main branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
+          force_orphan: true
+          exclude_assets: '.github,**.tex,**.cls,**.sty'
+          enable_jekyll: false
+          keep_files: false
+          full_commit_message: 'Update resumes from ${{ github.sha }}'
