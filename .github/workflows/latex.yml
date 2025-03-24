@@ -15,7 +15,7 @@ on:
 
 jobs:
   build-latex:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     
     steps:
       - name: Checkout code
@@ -23,15 +23,17 @@ jobs:
         with:
           fetch-depth: 0  # Required for version tagging
       
+      - name: Install MacTeX
+        run: |
+          brew install --cask mactex-no-gui
+          eval "$(/usr/libexec/path_helper)"
+          tlmgr update --self
+          tlmgr install latexmk
+      
       - name: Build LaTeX document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: 2025-resume-fmt1.tex
-          latexmk_use_xelatex: true
-          extra_system_packages: |
-            fonts-font-awesome5
-            texlive-latex-extra
-            texlive-fonts-recommended
+        run: |
+          xelatex -interaction=nonstopmode 2025-resume-fmt1.tex
+          xelatex -interaction=nonstopmode 2025-resume-fmt1.tex
       
       - name: Create Release
         id: create_release
