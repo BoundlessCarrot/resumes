@@ -1,0 +1,123 @@
+\documentclass[11pt,a4paper]{article}
+
+% Required packages
+\usepackage[margin=1.5cm]{geometry} % Page margins
+\usepackage{titlesec} % For section formatting
+\usepackage{enumitem} % For list customization
+\usepackage{hyperref} % For links
+\usepackage{fontawesome} % For icons
+\usepackage{xcolor} % For colors
+\usepackage{mathptmx} % For Georgia-like font
+\usepackage{array} % For better table formatting
+
+% Use Georgia-like font as default
+\renewcommand{\familydefault}{\rmdefault}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+
+% Custom section format
+\titleformat{\section}
+  {\normalfont\large\bfseries}{}{0em}{}[\titlerule]
+  
+% Custom spacing
+\titlespacing*{\section}{0pt}{*1.5}{*0.5}
+
+% Define colors
+\definecolor{sectioncolor}{RGB}{60,60,60}
+\definecolor{linkcolor}{RGB}{0,102,204}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdftitle={Jordan Streete Resume 2025 v1},
+    pdfauthor={Jordan Streete}
+}
+
+% Custom command for header info
+\newcommand{\headeritem}[1]{#1\hfill}
+
+% Custom command for section headers with spacing
+\newcommand{\resumesection}[1]{
+  \section*{\textcolor{sectioncolor}{\MakeUppercase{#1}}}
+}
+
+% Custom bullet style for skills
+\newcommand{\skill}[2]{
+  \textbf{#1} & #2 \\
+}
+
+% Custom command for job entries
+\newcommand{\job}[4]{
+  \textbf{#1 — #2} \hfill \textbf{#3} \\
+  \textit{#4}
+}
+
+\begin{document}
+
+% Header
+{\LARGE\textbf{Jordan Streete, Software Engineer}}\\
+Berlin, Germany, +49 162 8978 248, \href{mailto:jordan.streete@gmail.com}{jordan.streete@gmail.com}
+
+% Links section with actual hyperlinks
+\resumesection{Links}
+\href{https://www.linkedin.com/in/jordan-streete-0b8b3711a/}{LinkedIn} \hfill
+\href{https://jstr.dev}{Personal website} \hfill
+\href{https://github.com/BoundlessCarrot}{GitHub}
+
+% Profile section
+\resumesection{Profile}
+Dynamic Junior Software Engineer with 4 years of comprehensive experience in IoT, B2B ERP Software, and Payments. Proficient in Ruby, Python, and Zig, coupled with strong skills in database optimization and system reliability. Committed to continuous learning and growth, ready to embrace new challenges and expand technical expertise in a forward-thinking environment.
+
+% Employment history
+\resumesection{Employment \hspace{0.1em} History}
+
+\job{Oct 2022} {May 2025} {Associate Application Programmer, Marley Spoon} {Berlin}
+\begin{itemize}[leftmargin=*,label=$\bullet$,itemsep=0.3ex]
+    \item \textbf{Tech Stack:} Ruby, Rails, Sidekiq, GraphQL, Postgres, Coffeescript/Typescript, Kubernetes, AWS
+    \item Led payment system modernization, improving success rates and reducing manual intervention
+    \item Optimized database queries, cutting payment query times from 15+ sec to under 100ms
+    \item Built refund and payment retry systems, enhancing collection rates across multiple PSPs
+    \item Implemented error handling and monitoring with Datadog, improving system reliability
+    \item Redesigned invoice/billing system with localized dates and tax handling, improving reporting accuracy
+\end{itemize}
+  
+\job{Sep 2021} {Jun 2022} {Embedded/IoT Software Engineer (Werkstudent), Envio Systems} {Berlin}
+
+\job{Jun 2019} {Aug 2019} {Software Engineer Intern, Sirum GmbH} {Hamburg, Germany}
+
+\job{Jun 2017} {Aug 2018} {Photographers Assistant, KISS ME IN PARIS} {Paris, France}
+
+% Education
+\resumesection{Education}
+\job{Aug 2018} {} {B.S. Computer Science, Jacobs University} {Bremen}
+
+% Skills section in two columns
+\resumesection{Skills}
+\begin{tabular}{p{0.24\textwidth}p{0.24\textwidth}p{0.24\textwidth}p{0.24\textwidth}}
+  \textbf{Zig} & Skillful & \textbf{C/C++} & Beginner \\
+  \textbf{Ruby/Rails} & Skillful &   \textbf{Bash} & Beginner \\
+  \textbf{Git} & Skillful & \textbf{Rust} & Novice \\
+  \textbf{Python} & Skillful & \\
+\end{tabular}
+
+% Languages
+\resumesection{Languages}
+\begin{tabular}{ll}
+  \skill{English} {Native speaker} \\
+  \skill{German} {A2}
+\end{tabular}
+
+% Hobbies
+\resumesection{Hobbies}
+Biking $\cdot$
+Cooking $\cdot$
+Reading $\cdot$
+Video games (Counter-Strike, Destiny 2)
+
+\end{document}

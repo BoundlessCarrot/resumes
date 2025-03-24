@@ -1,0 +1,61 @@
+name: LaTeX Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.tex'
+      - '.github/workflows/latex.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.tex'
+      - '.github/workflows/latex.yml'
+  workflow_dispatch:
+
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Required for version tagging
+      
+      - name: Build LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: 2025-resume-fmt1.tex
+          latexmk_use_xelatex: true
+          extra_system_packages: |
+            fonts-font-awesome
+            texlive-latex-extra
+            texlive-fonts-recommended
+      
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Resume v${{ github.run_number }}
+          draft: false
+          prerelease: false
+          file: resume.pdf
+          file_name: resume.pdf
+        if: github.ref == 'refs/heads/main'
+      
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
+          force_orphan: true
+          exclude_assets: '.github,**.tex,**.cls,**.sty'
+          enable_jekyll: false
+          keep_files: false
+          full_commit_message: 'Update resume from ${{ github.sha }}' 
