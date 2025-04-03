@@ -42,8 +42,8 @@ jobs:
           release_name: Resume v${{ github.run_number }}
           draft: false
           prerelease: false
-          file: *.pdf
-          file_name: *.pdf
+          file: Jordan_Streete_Resume.pdf
+          file_name: Jordan_Streete_Resume.pdf
         if: github.ref == 'refs/heads/main'
       
       - name: Deploy to GitHub Pages
