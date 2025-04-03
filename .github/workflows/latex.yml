@@ -34,8 +34,7 @@ jobs:
       
       - name: Build LaTeX document
         run: |
-          ls -la
-          pdflatex -interaction=nonstopmode -output-directory=. Jordan_Streete-2025-Resume.tex
+          pdflatex -interaction=nonstopmode -output-directory=. 2025/*.tex
       
       - name: Create Release
         id: create_release
