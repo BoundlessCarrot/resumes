@@ -31,8 +31,13 @@ jobs:
           texlive-fonts-recommended \
           texlive-extra-utils \
           texlive-latex-extra
-          sudo tlmgr update --self
-          sudo tlmgr install fontawesome
+          
+          # Create and initialize TeX Live user directory
+          mkdir -p ~/.texlive
+          tlmgr init-usertree --force
+          
+          # Install additional packages using tlmgr
+          tlmgr install fontawesome
       
       - name: Build LaTeX document
         run: |
