@@ -31,6 +31,8 @@ jobs:
           texlive-fonts-recommended \
           texlive-extra-utils \
           texlive-latex-extra
+          sudo tlmgr update --self
+          sudo tlmgr install fontawesome
       
       - name: Build LaTeX document
         run: |
