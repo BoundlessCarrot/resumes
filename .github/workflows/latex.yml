@@ -30,7 +30,7 @@ jobs:
       
       - name: Build LaTeX document
         run: |
-          pdflatex -interaction=nonstopmode *.tex
+          pdflatex -interaction=nonstopmode Jordan_Streete-2025-Resume.tex
       
       - name: Create Release
         id: create_release
@@ -42,8 +42,8 @@ jobs:
           release_name: Resume v${{ github.run_number }}
           draft: false
           prerelease: false
-          file: Jordan_Streete_Resume.pdf
-          file_name: Jordan_Streete_Resume.pdf
+          file: Jordan_Streete-2025-Resume.pdf
+          file_name: Jordan_Streete-2025-Resume.pdf
         if: github.ref == 'refs/heads/main'
       
       - name: Deploy to GitHub Pages
