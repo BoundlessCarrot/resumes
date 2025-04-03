@@ -26,11 +26,16 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+          sudo apt-get install -y \
+          texlive-latex-base \
+          texlive-fonts-recommended \
+          texlive-extra-utils \
+          texlive-latex-extra
       
       - name: Build LaTeX document
         run: |
-          pdflatex -interaction=nonstopmode Jordan_Streete-2025-Resume.tex
+          ls -la
+          pdflatex -interaction=nonstopmode -output-directory=. Jordan_Streete-2025-Resume.tex
       
       - name: Create Release
         id: create_release
