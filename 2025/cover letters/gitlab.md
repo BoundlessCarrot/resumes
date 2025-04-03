@@ -1,0 +1,11 @@
+## Why should we work together?
+
+I'm a Backend Developer with 4 years of experience in both startup and post-startup environments, and I'm excited about the opportunity to contribute to GitLab's authorization system. While I haven't directly worked with RBAC implementations before, my experience with Ruby on Rails APIs and microservices has given me a strong foundation in building scalable systems. Since late 2022, I've worked on a payments processing team where I've dealt with complex permission systems and user access controls, which has sparked my interest in diving deeper into authorization systems.
+
+My experience with PostgreSQL, GitHub Actions CI/CD, Kubernetes, and Docker matches your tech stack, allowing me to hit the ground running. What particularly excites me about this role is the opportunity to work on enterprise-grade authorization systems. While I'm new to mature authorization systems, I'm eager to learn and contribute to building scalable solutions that give organizations complete control over their member access.
+
+I'm particularly drawn to the opportunity to influence critical architecture decisions and establish conventions that will shape how the authorization feature grows. My experience with both startup and post-startup environments has taught me the importance of building systems that can scale while maintaining performance and security. I'm also excited about the potential to collaborate with the Anti-abuse team on security-focused features, as I have a strong security mindset and some light experience with secure coding practices.
+
+While my primary focus is on backend development, I have some experience with TypeScript on the frontend, which could be valuable for cross-team collaboration. I'm not afraid to ask questions or seek help when needed, and I believe in the power of collaboration to build better solutions. I'm particularly impressed by GitLab's mission to enable everyone to contribute to software development, and I would be excited to be part of a team that's making this vision a reality.
+
+I'd love the opportunity to bring my skills, enthusiasm for learning, and collaborative mindset to the GitLab team — let's connect and see how we can build great things together.

@@ -15,7 +15,7 @@ on:
 
 jobs:
   build-latex:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     
     steps:
       - name: Checkout code
@@ -23,17 +23,15 @@ jobs:
         with:
           fetch-depth: 0  # Required for version tagging
       
-      - name: Install MacTeX
+      - name: Install LaTeX
         run: |
-          brew install --cask mactex-no-gui
-          eval "$(/usr/libexec/path_helper)"
-          tlmgr update --self
-          tlmgr install latexmk
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
       
       - name: Build LaTeX document
         run: |
-          xelatex -interaction=nonstopmode 2025-resume-fmt1.tex
-          xelatex -interaction=nonstopmode 2025-resume-fmt1.tex
+          pdflatex -interaction=nonstopmode resume.tex
+          pdflatex -interaction=nonstopmode resume.tex
       
       - name: Create Release
         id: create_release
