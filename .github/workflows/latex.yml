@@ -30,8 +30,7 @@ jobs:
       
       - name: Build LaTeX document
         run: |
-          pdflatex -interaction=nonstopmode resume.tex
-          pdflatex -interaction=nonstopmode resume.tex
+          pdflatex -interaction=nonstopmode *.tex
       
       - name: Create Release
         id: create_release
@@ -43,8 +42,8 @@ jobs:
           release_name: Resume v${{ github.run_number }}
           draft: false
           prerelease: false
-          file: resume.pdf
-          file_name: resume.pdf
+          file: *.pdf
+          file_name: *.pdf
         if: github.ref == 'refs/heads/main'
       
       - name: Deploy to GitHub Pages
