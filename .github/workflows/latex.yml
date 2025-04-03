@@ -41,16 +41,10 @@ jobs:
           sudo apt-get install -y \
           texlive-latex-base \
           texlive-fonts-recommended \
+          texlive-fonts-extra \
           texlive-extra-utils \
           texlive-latex-extra
-          
-          # Create and initialize TeX Live user directory
-          mkdir -p ~/.texlive
-          tlmgr init-usertree
-          
-          # Install additional packages using tlmgr
-          tlmgr update --self
-          tlmgr install fontawesome
+
       
       - name: Build LaTeX document
         run: |
