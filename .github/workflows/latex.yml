@@ -34,7 +34,7 @@ jobs:
           
           # Create and initialize TeX Live user directory
           mkdir -p ~/.texlive
-          tlmgr init-usertree --force
+          tlmgr init-usertree
           
           # Install additional packages using tlmgr
           tlmgr install fontawesome
