@@ -49,6 +49,7 @@ jobs:
           tlmgr init-usertree
           
           # Install additional packages using tlmgr
+          tlmgr update --self
           tlmgr install fontawesome
       
       - name: Build LaTeX document
