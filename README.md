@@ -1,101 +1,36 @@
-# LaTeX Resume Builder
+# Resume Repository
 
-This repository contains LaTeX templates for professional resumes in two popular styles:
-- Awesome CV
-- ModernCV
-
-The repository is configured with GitHub Actions to automatically build PDF versions of the resumes when changes are pushed.
-
-## Prerequisites
-
-To work with these templates locally, you need:
-
-1. A LaTeX distribution installed on your computer:
-   - For Windows: [MiKTeX](https://miktex.org/download)
-   - For macOS: [MacTeX](https://www.tug.org/mactex/)
-   - For Linux: `texlive` (`sudo apt-get install texlive-full` on Debian/Ubuntu)
-
-2. For Awesome CV, you'll need XeLaTeX which is included in most modern LaTeX distributions
-
-3. Font packages:
-   - Font Awesome for icons (included in most LaTeX distributions)
-   - For Awesome CV: specific fonts (covered in project files)
+This repository contains different versions of my professional resume, organized chronologically by year. Each year's directory contains multiple versions of the resume, allowing for easy tracking of changes and different formats used for various applications.
 
 ## Repository Structure
 
 ```
-├── awesome-cv-resume.tex      # Resume using Awesome CV template
-├── moderncv-resume.tex        # Resume using ModernCV template
-├── fonts/                     # Custom fonts for Awesome CV
-├── .github/
-│   └── workflows/
-│       └── build-latex.yml    # GitHub Actions workflow
-└── README.md                  # This file
+├── 2025/                    # Current year's resume versions
+├── 2024/                    # 2024 resume versions
+├── pre-2024/               # Resume versions from before 2024
+└── README.md               # This file
 ```
 
-## Local Building
+## Version Control
 
-### Awesome CV
-
-```bash
-xelatex awesome-cv-resume.tex
+Each resume version is named with the following format:
+```
+[Name]-[Position]_v[version]_[year]_fmt[format].pdf
 ```
 
-### ModernCV
+For example:
+- `Jordan_Streete-Software_Engineer_v3_2024_fmt1.pdf`
+- `Jordan_Streete-Software_Engineer_v3_2024_fmt2.pdf`
 
-```bash
-pdflatex moderncv-resume.tex
-```
+This naming convention helps track:
+- Different versions of the resume (v1, v2, etc.)
+- The year the version was created
+- Different formats used for various applications (fmt1, fmt2, etc.)
 
-## GitHub Actions
+## Usage
 
-The repository is configured with a GitHub Actions workflow that automatically:
-
-1. Builds both resume formats when changes are pushed
-2. Makes the PDFs available as build artifacts
-3. Optionally deploys the PDFs to GitHub Pages
-
-## Customization
-
-### Personal Information
-
-Edit the personal information section in each file:
-
-For Awesome CV:
-```latex
-\name{Your}{Name}
-\position{Your Position}
-\address{Your Address}
-...
-```
-
-For ModernCV:
-```latex
-\name{Your}{Name}
-\title{Your Position}
-\address{Your Address}{}{}
-...
-```
-
-### Styling
-
-#### Awesome CV
-
-Change the primary color:
-```latex
-\colorlet{awesome}{awesome-red} % Options: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
-```
-
-#### ModernCV
-
-Change the style and color:
-```latex
-\moderncvstyle{classic} % Options: 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}    % Options: 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-```
-
-## License
-
-This project uses template code from:
-- [Awesome CV](https://github.com/posquit0/Awesome-CV) (CC BY-SA 4.0)
-- [ModernCV](https://github.com/moderncv/moderncv) (The LaTeX Project Public License 1.3c)
+This repository serves as a centralized location for:
+1. Storing different versions of my resume
+2. Tracking changes and improvements over time
+3. Maintaining multiple formats for different job applications
+4. Version control of resume content
