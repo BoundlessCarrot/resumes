@@ -1,0 +1,11 @@
+## Why should we work together?
+
+I'm a Backend Developer with 4 years of experience in both startup and post-startup environments, and I'm excited about the opportunity to contribute to Sourcegraph's mission of making code accessible to everyone. My experience aligns perfectly with the technical challenges of building compiler-type indexers and robust backend APIs. Since late 2022, I've worked on distributed systems handling payments processing, dealing with complex data flows across Ruby on Rails APIs and Kafka microservices. This experience with distributed systems, database optimization, and building reliable backend services directly translates to the challenges faced by the Graph team.
+
+My technical background demonstrates my ability to work across multiple programming languages and systems. While my primary experience is in Ruby, I've also worked with TypeScript and have a strong foundation in systems programming concepts. I'm particularly excited about the opportunity to work with Go, C++, and other languages in the Graph team's codebase. My experience with database optimization and distributed systems architecture would be valuable in improving Sourcegraph's code indexing and navigation capabilities.
+
+What particularly draws me to this role is the chance to work on compiler integrations and distributed systems at scale. I'm passionate about solving complex technical challenges and have a proven track record of contributing to systems that process and analyze large amounts of data reliably. My experience with CI/CD pipelines, containerization, and microservices architecture would be valuable in building and maintaining the robust infrastructure needed for Sourcegraph's code analysis tools.
+
+I'm not just looking for another job – I'm seeking an opportunity to work on technology that fundamentally improves how developers understand and work with code. I bring not just technical skills, but also a collaborative mindset and a genuine enthusiasm for learning and sharing knowledge. I'd be excited to contribute to Sourcegraph's mission while growing my expertise in compiler technology and distributed systems.
+
+Let's connect and explore how we can build something extraordinary together.
